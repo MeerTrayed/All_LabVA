@@ -1,5 +1,7 @@
-#Threat Vs Vulnerability (Form)
+#Threat Vs Vulnerability (Form) <br/>
+
 | No. | Scenario | Category |
+|-----|----------|----------|
 | 1 | An employee receives an email from “HR Department” asking to verify their login details via a link.| Threat |
 | 2 | A company server is running Windows Server 2012, which no longer receives security updates | Vulnerability |
 | 3 | A developer accidentally uploads API keys to a public GitHub repository. | Vulnerability |
