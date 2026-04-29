@@ -30,7 +30,7 @@ why -x .ticket?<br>
 *-x = extension || while .ticket indicates: “Also try each word in the wordlist with .ticket added at the end"*<br>
  ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/9b4b11b09108ab27fc7e36227e03377d8fa7675c/ImageGit/GobusterTicket.png)
  
- green_arrow.ticket web pages reveal this
+ green_arrow.ticket web pages reveal this<br>
  ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/9b4b11b09108ab27fc7e36227e03377d8fa7675c/ImageGit/GreenArrow.png)<br>
  
 **RTy8yhBQdscx** what is decode for this in Google, The string RTy8yhBQdscx is a **Base58** encoded <br>
