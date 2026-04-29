@@ -16,7 +16,8 @@ gobuster dir --url http://10.10.104.199/island  --wordlist /usr/share/wordlists/
  web 2100 and  Web page Resource for 2100
 
 gobuster dir --url http://10.10.104.199/island/2100 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .ticket 
-why -x .ticket
+why -x .ticket:
+-x = extension || while .ticket indicates: “Also try each word in the wordlist with .ticket added at the end”
  
  
 RTy8yhBQdscx what is decode for this in Google
@@ -34,7 +35,7 @@ Cat Queen’s_Gambit.png
 Cat aa.png
 
 
-View them, seen Leave_me_alone.png isn’t in the correct file format. It might be a file disguise an an png image format or hidden text?
+View them, seen Leave_me_alone.png isn’t in the correct file format. It might be a file disguised as a PNG image or hidden text?
  
 HexEdit can be used to check and edit the binary header of this file.
 Checking and comparing PNG
@@ -48,16 +49,11 @@ notice how Leave_me_alone.png binaries are different. Let's try to change the Le
 
 
 The image is now able to be viewed.
-Using steghide, we can try to extract hidden data from the other image files we downloaded, which shows what commands you’re allowed to run as another user (usually root) without needing full root access.
-What it reveals:
-1. Which commands you can run with sudo
-2. Whether you need a password or not (NOPASSWD)
-3. Which user you can run commands as (root or other
+Steghide in general, hide or extract secret data inside images. It can be used here to reveal what is actually inside aa.jpg.
+-sf actually for extracting hidden data inside image for steghide
 
 
-After Steghide reveals what is actually inside aa.jpg
-
-Now we can extract the file and read it:
+Now we can extract the .zip file and read it:
 
 shado contains the password for slade
 M3tahuman
@@ -74,6 +70,13 @@ THM{P30P7E_K33P_53CRET5__C0MPUT3R5_D0N'T}
 
 Now, to access the root user, upon doing sudo -l, it reveals this
 Why sudo -l?
+which shows what commands you’re allowed to run as another user (usually root) without needing full root access.
+What it reveals:
+1. Which commands you can run with sudo
+2. Whether you need a password or not (NOPASSWD)
+3. Which user you can run commands as (root or other
+
+
 
 
 sudo pkexec /bin/bash
