@@ -7,4 +7,4 @@
 |3| Vulnerable Machine: PwnDrive Academy | [ClickMe](https://github.com/MeerTrayed/Pwntilldawn-Lab3). |
 |4| METADATA | [ClickMe](LabTool.md). |
 |5| ACTIVE FOOTPRINTING | FileKatTeams. |
-|6| TryHackMe (Lian_Yu) | |
+|6| TryHackMe (Lian_Yu) | [ClickMe](tryhackme.md) |
