@@ -10,6 +10,7 @@ This picture shows ssh and ftp service is existed in this IP.
 There apache(web):  _http://10.49.129.47_<br/>
 Just a blog about Arrowverse
 
+gobuster discover hidden directories and files on a web server. When you visit a website normally, you only see pages that are linked in the UI, but many servers contain unlisted or hidden paths
 Next step, try to check for a hidden directory using:<br>
 `gobuster dir --url 10.10.104.199 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`<br>
 ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/0eabbfdd942e12580481d5c9cd0ca9c72ac1169d/ImageGit/Ditbuster1.png)<br>
@@ -26,7 +27,7 @@ Web 2100 and  Web page Resource for 2100, shows that theres something we can sea
 `gobuster dir --url http://10.10.104.199/island/2100 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .ticket `<br>
 
 why -x .ticket?<br>
-*-x = extension || while .ticket indicates: “Also try each word in the wordlist with .ticket added at the end*<br>
+*-x = extension || while .ticket indicates: “Also try each word in the wordlist with .ticket added at the end"*<br>
  ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/9b4b11b09108ab27fc7e36227e03377d8fa7675c/ImageGit/GobusterTicket.png)
  ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/9b4b11b09108ab27fc7e36227e03377d8fa7675c/ImageGit/GreenArrow.png)<br>
  
