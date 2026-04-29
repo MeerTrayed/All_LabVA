@@ -10,7 +10,8 @@ This picture shows ssh and ftp service is existed in this IP.
 There apache(web):  _http://10.49.129.47_<br/>
 Just a blog about Arrowverse
 
-gobuster discover hidden directories and files on a web server. When you visit a website normally, you only see pages that are linked in the UI, but many servers contain unlisted or hidden paths
+gobuster discover hidden directories and files on a web server. When you visit a website normally, you only see pages that are linked in the UI, but many servers contain unlisted or hidden paths<br>
+
 Next step, try to check for a hidden directory using:<br>
 `gobuster dir --url 10.10.104.199 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`<br>
 ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/0eabbfdd942e12580481d5c9cd0ca9c72ac1169d/ImageGit/Ditbuster1.png)<br>
