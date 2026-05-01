@@ -47,11 +47,11 @@ Let's check if there's another user<br>
 
 Download the file into your computer environment.
 ```
-Cat Leave_me_alone.png
-Cat Queen’s_Gambit.png
-Cat aa.png
+get Leave_me_alone.png
+get Queen’s_Gambit.png
+get aa.png
 ```
-<br>
+Than use cat to read the file.<br>
 View them, seen Leave_me_alone.png isn’t in the correct file format. might it be a file disguised as a PNG image or hidden text?<br>
 
 ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/9b4b11b09108ab27fc7e36227e03377d8fa7675c/ImageGit/ViewImage.png)<br/>
