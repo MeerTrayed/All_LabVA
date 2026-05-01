@@ -101,7 +101,7 @@ reveal /usr/bin/pkexec with permissions like -rwsr-xr-x which indicates the SUID
 ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/aea2e37fea30ca2d422ae746c4eccf37186e2a1e/ImageGit/sudo%20l.png)<br/>
 
 
-`sudo pkexec /bin/bash<br>`
+`sudo pkexec /bin/bash` <br>
 Got the root user, read the file<br>
 boom root flag<br>
 ![img alt](https://github.com/MeerTrayed/All_LabVA/blob/aea2e37fea30ca2d422ae746c4eccf37186e2a1e/ImageGit/pkexec.png)<br/>
