@@ -21,4 +21,12 @@
 | Firewall Block | Router sends"Communication Administratively Prohibited."| Security Policy Audit |
 
 - The file contains a URL: https://tinyurl.com/yr5zprz4
+  - Contain pigpen ciper, the zero is a single dot, <br> while the x is double dot.
 ![LinkImage]()
+
+- Using this website to decipher it https://www.boxentriq.com/alphabets/pigpen-cipher
+![LinkImage]()
+
+We got `EXMACHINAAVA`
+
+## Question 3:
