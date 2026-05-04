@@ -61,16 +61,34 @@ We got `EXMACHINAAVA`
    | Windows 7 SP1(SNB) | This is highly likely to be vulnerable to EternalBlue (CVE-2017-0144), the exploit used in the WannaCry ransomware attacks. |
 
 3. Which one is the highest risk and why?
-
-  Higher risk port 445. While the FTP backdoor is critical, Port 445 on an unpatched Windows 7 machine represents the highest risk because it typically allows for Remote Code Execution (RCE) with SYSTEM privileges. It      requires no user interaction and provides the attacker with total control over the operating system instantly.
+   Higher risk port 445. While the FTP backdoor is critical, Port 445 on an unpatched Windows 7 machine represents the highest risk because it typically allows for Remote Code Execution (RCE) with SYSTEM privileges. It     requires no user interaction and provides the attacker with total control over the operating system instantly.
      
-5. What attack path can be built from this? <br/>
+4. What attack path can be built from this? <br/>
    HTTP -> FTP (backdoor) OR SMB (EternalBlue) → initial access → privilege escalation → pivot to SSH/SMB
    
-7. What should be the remediation?
+5. What should be the remediation?
    - Upgrade and patch = Move to a modern OS or apply the MS17-010 patch immediately. Regularly update all software to fix known vulnerabilities.
    - Access control = Use firewalls and network segmentation to limit access to authorized IPs only. Restrict ports like 22, 139, and 445.
    - Disable anonymous and default access = Turn off anonymous FTP login and remove default credentials from all services.
    - Encryption enforcement = Use secure protocols such as HTTPS instead of HTTP and disable weak encryption algorithms in SSH.
    - Monitoring and logging = Enable logging for FTP, SSH, and SMB. Use intrusion detection systems (IDS) to detect suspicious activities.
+
+# Question 4
+ttl = time to live | ***Think of the TTL as a countdown timer for a packet.***
+### Image 1
+| Field | OS | Explanation |
+|-----|------|------|
+| ttl 64 | Linux, macOS, dan Unix | The reply is exactly 64, the device is likely on your local network (0 hops away). Common for Linux, macOS, and mobile devices (Android/iOS). |
+
+### Image 2
+| Field | OS | Explanation |
+|-----|------|------|
+| ttl 255 | Network Infrastructure | almost exclusively the signature of Network Infrastructure (Mainframes, Cisco Routers and Switches, Solaris/HP-UX).
+
+### Image 3
+| Field | OS | Explanation |
+|-----|------|------|
+| ttl 128 | Microsoft Windows | its default starting value for the TCP/IP stack in the early days of Windows (NT/95) |
+
+# Question 5
 
