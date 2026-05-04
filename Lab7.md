@@ -31,4 +31,37 @@ We got `EXMACHINAAVA`
 
 ## Question 3: NMAP OUTPUT ANALYSIS
 
+ 1. What can an attacker do with each port?
+    | No. | Ports | Service | Attacker Action |
+    |--------|-------------|--------|----------|
+    | 1 | 21 (FTP) | vsftpd | An attacker can attempt an Anonymous Login, brute force credentials to steal, upload/download files, or gain backdoor access. |
+    | 2 | 22 (SSH) | OpenSSH | Primarily used for remote command-line access. Attackers would attempt brute-force weak credentials or look for leaked SSH keys. |
+    | 3 | 80(HTTP) | Apache  | Enumerating host information, Web attacks (SQLi, XSS), and master browsers to map the internal network. |
+    | 4 | 139/445(SMB) | Windows 7 SP1 | These are the "ultimate target" for lateral movement. An attacker can attempt to enumerate user shares, steal password hashes, or execute remote code. |
+
+    SMB additional note:
+    Port 445 is usually the bigger target because it’s the default for modern Windows. However, seeing both open (as in your scan) tells an attacker that the system is likely configured for legacy compatibility, which       often means it's running older, more vulnerable code.
+   - Access to Sensitive Data
+    Port 445 is the gateway to the "jewels" themselves. It handles file sharing, which means if an attacker breaks in through this port, they gain access to:
+        - Financial Records: Spreadsheets, payroll, and tax info.
+        - Customer Data: Databases containing names, addresses, and credit card info.  
+        - Intellectual Property: Project plans, source code, and internal memos.
+  - High-Level Control (The "Master Key")<br/>
+     In Windows environments, SMB is deeply tied to Active Directory.  
+
+  If an attacker exploits Port 445, they aren't just a "guest" on the computer. They often gain SYSTEM or Administrator privileges. <br/>
+  This is the "master key" to the castle. From here, they can see every other computer on the network, steal more passwords, and eventually take over the entire company network (lateral movement).
+  
+2. What vulnerabilities are likely present based on the version?
+   | Service Version | Vulnerabilities |
+   |-----------------|-----------------|
+   | vsftpd 2.3.4 | This specific version is famous for a backdoor (CVE-2011-2523). If a user logs in with a username ending in :), a shell opens on port 6200. |
+   | Apache 2.2.8 | This version is over a decade old and is susceptible to various Denial of Service (DoS) attacks and potential memory leaks. |
+   | OpenSSH 5.3p1 | Weak crypto, User enumeration and Brute-force attacks |
+   | Windows 7 SP1(SNB) | This is highly likely to be vulnerable to EternalBlue (CVE-2017-0144), the exploit used in the WannaCry ransomware attacks. |
+
+3. Which one is the highest risk and why?
+4. What attack path can be built from this?
+5. What should be the remediation?
+
 
