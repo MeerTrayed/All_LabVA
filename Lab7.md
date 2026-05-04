@@ -29,4 +29,6 @@
 
 We got `EXMACHINAAVA`
 
-## Question 3:
+## Question 3: NMAP OUTPUT ANALYSIS
+
+
