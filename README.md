@@ -8,3 +8,4 @@
 |4| METADATA | [ClickMe](LabTool.md). |
 |5| ACTIVE FOOTPRINTING | FileKatTeams. |
 |6| TryHackMe (Lian_Yu) | [ClickMe](tryhackme.md) |
+|7| Scanning | [ClickMe]() |
