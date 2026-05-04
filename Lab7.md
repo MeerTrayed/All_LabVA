@@ -97,12 +97,18 @@ The affected Port number is 8009 / tcp / ajp13.
    
 2. **What is the Affected protocol**<br/>
 AJP (Apache JServ Protocol)
+-a binary, optimized protocol used to proxy requests from a web server (e.g., Apache HTTP Server) to an application server (e.g., Apache Tomcat). It increases performance over HTTP by reducing request parsing overhead and supports load balancing, session routing, and secure communication behind a firewall.
   
-3. **What is the CVSS Score of vulnerability **found<br/>
+4. **What is the CVSS Score of vulnerability found**<br/>
 9.8 (Critical) - CVSS v3.0 Base Score
    
-4. **Can you find any exploit related to this vulnerability?**<br/>
-Yes - "Exploit Available: true", "Exploits are available", "Exploited by Nessus: true"
+5. **Can you find any exploit related to this vulnerability?**<br/>
+Yes,"Exploit Available: true" and "Exploited by Nessus: true"
    
-5. **Find CVE for this vulnerability.**<br/>
+6. **Find CVE for this vulnerability.**<br/>
 CVE-2020-1938
+
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/5808a9787ae30d006cbe68c7ebdebae21a01b753/ImageGit/Tom1.png)
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/5808a9787ae30d006cbe68c7ebdebae21a01b753/ImageGit/Tom2.png)
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/5808a9787ae30d006cbe68c7ebdebae21a01b753/ImageGit/Tom3.png)
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/5808a9787ae30d006cbe68c7ebdebae21a01b753/ImageGit/Tom4.png)
