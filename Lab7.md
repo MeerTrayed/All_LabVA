@@ -49,8 +49,8 @@ We got `EXMACHINAAVA`
   - High-Level Control (The "Master Key")<br/>
      In Windows environments, SMB is deeply tied to Active Directory.  
 
-  If an attacker exploits Port 445, they aren't just a "guest" on the computer. They often gain SYSTEM or Administrator privileges. <br/>
-  This is the "master key" to the castle. From here, they can see every other computer on the network, steal more passwords, and eventually take over the entire company network (lateral movement).
+    If an attacker exploits Port 445, they aren't just a "guest" on the computer. They often gain SYSTEM or Administrator privileges. <br/>
+    This is the "master key" to the castle. From here, they can see every other computer on the network, steal more passwords, and eventually take over the entire company network (lateral movement).
   
 2. What vulnerabilities are likely present based on the version?
    | Service Version | Vulnerabilities |
@@ -61,7 +61,16 @@ We got `EXMACHINAAVA`
    | Windows 7 SP1(SNB) | This is highly likely to be vulnerable to EternalBlue (CVE-2017-0144), the exploit used in the WannaCry ransomware attacks. |
 
 3. Which one is the highest risk and why?
-4. What attack path can be built from this?
-5. What should be the remediation?
 
+  Higher risk port 445. While the FTP backdoor is critical, Port 445 on an unpatched Windows 7 machine represents the highest risk because it typically allows for Remote Code Execution (RCE) with SYSTEM privileges. It      requires no user interaction and provides the attacker with total control over the operating system instantly.
+     
+5. What attack path can be built from this? <br/>
+   HTTP -> FTP (backdoor) OR SMB (EternalBlue) → initial access → privilege escalation → pivot to SSH/SMB
+   
+7. What should be the remediation?
+   - Upgrade and patch = Move to a modern OS or apply the MS17-010 patch immediately. Regularly update all software to fix known vulnerabilities.
+   - Access control = Use firewalls and network segmentation to limit access to authorized IPs only. Restrict ports like 22, 139, and 445.
+   - Disable anonymous and default access = Turn off anonymous FTP login and remove default credentials from all services.
+   - Encryption enforcement = Use secure protocols such as HTTPS instead of HTTP and disable weak encryption algorithms in SSH.
+   - Monitoring and logging = Enable logging for FTP, SSH, and SMB. Use intrusion detection systems (IDS) to detect suspicious activities.
 
