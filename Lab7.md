@@ -2,17 +2,18 @@
 ## Question 1:
 - consists entirely of ICMP (Internet Control Message Protocol) packets.
 - Inside the payload, string: U1VDVEYyMDIze2FpX2lzX2Nvb2x9<br/>
-![LinkImage]()
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/8b3c5807407897f14bff248b7b0aaef51f620699/ImageGit/1p.png)
 
 - I use this website to identify the Cipher _https://www.boxentriq.com/analysis/cipher-identifier_<br/>
-![LinkImage]()
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/8b3c5807407897f14bff248b7b0aaef51f620699/ImageGit/3p.png)
 
-- When decoded: SUCTF2023{ai_is_cool}<br/>
-![LinkImage]()
+- When decoded:<br/>
+- Flag = SUCTF2023{ai_is_cool}<br/>
+
 
 ## Question 2:
 - Opening the file search for ftp -data <br/>
-  = Reason: <br/>
+  Reason: <br/>
   
 | Scenario | Why it's in the ICMP file | Intent |
 |--------|---------------------------|--------|
@@ -21,11 +22,11 @@
 | Firewall Block | Router sends"Communication Administratively Prohibited."| Security Policy Audit |
 
 - The file contains a URL: https://tinyurl.com/yr5zprz4
-  - Contain pigpen ciper, the zero is a single dot, <br> while the x is double dot.
-![LinkImage]()
+  - Contain pigpen cipher, the zero is a single dot, while the x is double dot.
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/8b3c5807407897f14bff248b7b0aaef51f620699/ImageGit/2p.png)
 
 - Using this website to decipher it https://www.boxentriq.com/alphabets/pigpen-cipher
-![LinkImage]()
+![LinkImage](https://github.com/MeerTrayed/All_LabVA/blob/8b3c5807407897f14bff248b7b0aaef51f620699/ImageGit/4p.png)
 
 We got `EXMACHINAAVA`
 
@@ -91,4 +92,17 @@ ttl = time to live | ***Think of the TTL as a countdown timer for a packet.***
 | ttl 128 | Microsoft Windows | its default starting value for the TCP/IP stack in the early days of Windows (NT/95) |
 
 # Question 5
-
+1. **What is the affected Port number**<br/>
+The affected Port number is 8009 / tcp / ajp13.
+   
+2. **What is the Affected protocol**<br/>
+AJP (Apache JServ Protocol)
+  
+3. **What is the CVSS Score of vulnerability **found<br/>
+9.8 (Critical) - CVSS v3.0 Base Score
+   
+4. **Can you find any exploit related to this vulnerability?**<br/>
+Yes - "Exploit Available: true", "Exploits are available", "Exploited by Nessus: true"
+   
+5. **Find CVE for this vulnerability.**<br/>
+CVE-2020-1938
