@@ -9,3 +9,4 @@
 |5| ACTIVE FOOTPRINTING | FileKatTeams. |
 |6| TryHackMe (Lian_Yu) | [ClickMe](tryhackme.md) |
 |7| Scanning | [ClickMe](Lab7.md) |
+|8-9 | Enumeration | [ClickMe](https://github.com/MeerTrayed/All_LabVA/blob/main/Arrange_File/Lab8-9.md)
